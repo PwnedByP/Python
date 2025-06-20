@@ -1,3 +1,20 @@
+'''
+Implement a Student, School, and a City classes like so:
+
+Student, School, and City have a name attribute, given at initialization time.
+A Student have an add_exam(grade) method, recording a new grade for him, as a float.
+A School have an add_student(student) method.
+A City have an add_school(school) method.
+Student, School, and City have a get_mean() method giving:
+For the Student, the average of its results.
+For the School, the average of the students averages.
+For the City the average of the School averages.
+School have a get_best_student() method, returning the best Student.
+Cities have a get_best_school() and a get_best_student() methods, returning respectively a School and a Student...
+
+https://genepy.org/exercises/student-class
+'''
+
 class Student:
     def __init__(self, name):
         self.name = name
@@ -78,7 +95,8 @@ class City:
         return best_student.name
 
 
-#Test case
+'''
+Test case
 
 s1 = Student("Alice")
 s1.add_exam(90)
@@ -96,3 +114,4 @@ city.add_school(school)
 
 print("City average:", city.get_mean())
 print("Best student:", city.get_best_student())
+'''
